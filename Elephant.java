@@ -9,6 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound elephantSound = new GreenfootSound("elephant-352698.mp3");
+    GreenfootImage idle = new GreenfootImage("images/elephants/idle0.png");
+    
+    //constructor
+    public Elephant()
+    {
+        setImage(idle);
+    }
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
