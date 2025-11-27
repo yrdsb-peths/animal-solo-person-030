@@ -9,7 +9,7 @@ public class MyWorld extends World {
         
         //creates an elephant
         Elephant e = new Elephant();
-        addObject(e, 300, 300);
+        addObject(e, 300, 350);
         //creates a lable
         addObject(scoreL, 50, 50);
         
