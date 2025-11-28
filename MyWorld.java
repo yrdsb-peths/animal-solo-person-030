@@ -3,6 +3,7 @@ import greenfoot.*;
 public class MyWorld extends World {
     public int score = 0;
     Label scoreL = new Label(0, 80);
+    int level = 1;
     public MyWorld() {
         //creates a cell of 600, 400
         super(600, 400, 1, false);
@@ -27,11 +28,17 @@ public class MyWorld extends World {
     {
         score++;
         scoreL.setValue(score++);
+        
+        if(score % 5 == 0)
+        {
+            level += 1;
+        }
     }
     //creates the apples in random x positions
     public void createApple()
     {
         Apple apple = new Apple();
+        apple.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple, x, y);
